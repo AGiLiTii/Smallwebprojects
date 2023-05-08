@@ -1,0 +1,206 @@
+body, ul, h1, h2, a {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+header {
+    color: white;
+    background-color: #3f5d8a;
+    padding: 7px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+header h1 {
+    border-radius: 50px;
+    display: inline-block;
+    border:5px solid white ;
+    padding: 6px 12px;
+}
+.banner {
+    position: relative;
+
+}
+.banner img {
+    max-width: 100%;
+}
+.banner .welcome {
+    color: #3f5d8a;
+    position: absolute;
+    left: 68%;
+    top: 20%;
+}
+.banner h2 {
+    font-size: 50px;
+}
+.banner h2 span {
+    font-size:1.3em ;
+}
+nav {
+    background-color: #8fa1b1;
+    padding: 20px;
+    position: sticky;
+    top: 69px;
+    width: 98%;
+}
+nav ul {
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav li{
+    width: 25%;
+    display: inline-block;
+}
+nav li a {
+    text-decoration: none;
+    color: #2c2c2c;
+}
+nav li a.join {
+    color: red;
+}
+main {
+    max-width: 100%;
+    width: 1500px;
+    margin: 80px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+article h2 {
+    color: #3f5d8a;
+    font-size: 48px;
+}
+article p {
+    line-height: 1.8em;
+    color: #2c2c2c;
+}
+.images {
+    text-align: center;
+    margin: 20px 0;
+    white-space: nowrap;
+}
+.images li {
+    display: inline-block;
+    width: 42%;
+    margin: 20px 5%;
+}
+.images li img{
+    max-width: 100%;
+    padding: 10px 0px;
+}
+.join2 {
+    background-color: #8fa1b1;
+    text-align: center;
+    padding: 30px 20px;
+    color: #2c2c2c;
+}
+.join2 h2 {
+    font-size: 36px;
+}
+form input {
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 4px solid white;
+    border-radius: 28px;
+}
+footer {
+    background: #3f5d8a;
+    color: white;
+    text-align: center;
+}
+
+/* pseudo classes */
+
+nav li a:hover{
+    text-decoration: underline;
+}
+
+.images li:hover{
+    position: relative;
+    z-index: -1;
+    top: -4px;
+}
+form input:focus{
+    border: 3px dashed #3f5d8a;
+    border-radius: 30px;
+    outline: none;
+}
+form input:valid{
+    border: 3px solid green;
+}
+section.join2 {
+    font-weight: bold;
+}
+p::selection{
+    background-color: #3f5d8a;
+    color: white;
+}
+
+/* responsive styles */
+
+@media screen and (max-width:1400px){
+
+    .banner .welcome h2 {
+        font-size: 45px;
+    }
+    nav li a{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:960px) {
+
+    .banner .welcome h2 {
+        font-size: 35px;
+        position: relative;
+        bottom: -20px;
+    }
+}
+@media screen and (max-width:730px) {
+
+    .banner .welcome  {
+        position: relative;
+        text-align: center;
+        left: 5px;
+        top:-22px;
+        padding: 2px;
+    }
+    .banner .welcome br {
+        display: none;
+    }
+    .banner .welcome span {
+        font-size: 1em;
+    }
+
+    .images li {
+        width: 100%;
+        margin: 20px auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width:470px) {
+    nav.main-nav{
+        padding: 2px 20px;
+        position: sticky;
+        top: 0px;
+    }
+    nav li {
+        font-size: 20px;
+        position: relative;
+        display: block;
+        margin: 8px 0;
+    }
+    header {
+        position: relative;
+    }
+    .images li:hover{
+        z-index: -1;
+        display: block;
+        top:0px;
+    }
+}
